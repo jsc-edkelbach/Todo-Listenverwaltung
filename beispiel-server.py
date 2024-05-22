@@ -113,7 +113,10 @@ def handle_listEntry(list_id,entry_id):
         # create id for new list, save it and return the list with id
         list_entry['id'] = entry_id
         list_entry['list'] = list_id
-        todos.append(list_entry)
+        for index, e in enumerate(todos):
+            if e['list'] == list_id:
+                if e['id'] == entry_id:
+                    todos[index].update(list_entry)
         return jsonify(list_entry), 200
     elif request.method == 'DELETE':
         # delete list with given id
