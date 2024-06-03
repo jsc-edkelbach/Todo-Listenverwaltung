@@ -6,7 +6,7 @@ Von Eduard Kelbach
 
    Per ssh auf den Raspberry-Pi (Adresse des Pi muss bekannt sein)     
    In unseren Fall war dies 192.168.24.137  
-   `ssh pi@192.168.24.134`  
+   `ssh pi@192.168.24.137`  
 2. Rausfinden des Netzwerknamens:  
 
    Um verfügbare verbindungen anzuzeigen: `sudo nmcli -p connection show`  
